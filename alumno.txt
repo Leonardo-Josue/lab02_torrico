@@ -1,0 +1,35 @@
+class Alumno {
+  String? nombres;
+  String? apellidos;
+  int? nota1;
+  int? nota2;
+  int? nota3;
+
+  // Constructor 1: con Nombres y Apellidos
+  Alumno(this.nombres, this.apellidos);
+
+  // Constructor 2: con Nota1, Nota2, y Nota3
+  Alumno.notas(this.nota1, this.nota2, this.nota3);
+
+  // Método toString para mostrar Nombres y Apellidos
+  @override
+  String toString() {
+    return 'Nombres: $nombres, Apellidos: $apellidos';
+  }
+}
+
+void main() {
+  // Crear un objeto de Alumno con notas
+  Alumno objX = Alumno.notas(20, 20, 15);
+  print('Nota1: ${objX.nota1}, Nota2: ${objX.nota2}, Nota3: ${objX.nota3}');
+
+  // Crear un objeto de Alumno con Nombres y Apellidos
+  Alumno objY = Alumno('Josué', 'Chávez');
+  objY.nota1 = 20;
+  objY.nota2 = 20;
+  objY.nota3 = 15;
+
+  print(objY.toString()); // Imprime Nombres y Apellidos
+}
+
+  
